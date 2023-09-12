@@ -122,3 +122,16 @@ function checkWinner(dolphinAverage, koalaAverage) {
 checkWinner(dolphinAverage, koalaAverage)
 
 //Coding Challenge 6
+const bills = [125, 55, 44]
+const tips = []
+const totals = []
+let calcTip = function(bills) {
+    return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2
+}
+for (let index = 0; index < bills.length; index++) {
+    const tip = calcTip(bills[index]);
+    console.log(tip)
+    tips.push(tip);
+    totals.push(tip + bills[index]);
+}
+console.log(bills, tips, totals)
